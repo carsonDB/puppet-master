@@ -1,0 +1,31 @@
+{
+  "name": "puppet-master",
+  "version": "1.0.0",
+  "description": "a bundle tool which support modulized coding and custom tags for browsers",
+  "main": "index.js",
+  "dependencies": {
+    "htmlparser": "^1.7.7"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carsonDB/puppet-master.git"
+  },
+  "keywords": [
+    "bundle",
+    "module",
+    "custom-element",
+    "custom-tag"
+  ],
+  "author": "carsonDB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carsonDB/puppet-master/issues"
+  },
+  "homepage": "https://github.com/carsonDB/puppet-master#readme"
+}

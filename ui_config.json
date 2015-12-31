@@ -1,6 +1,0 @@
-{
-	"define": {
-		"div": "./my-div",
-		"ul": "./my-ul"
-	}
-}
