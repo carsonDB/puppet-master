@@ -1,7 +1,7 @@
 var path = require('path')
 var fs = require('fs')
 var browserify = require('browserify')
-var countTag = require('./lib/count-native-tag.js')
+// var countTag = require('./lib/count-native-tag.js')
 var buildConstructor = require('./lib/build-constructor.js')
 var buildHTML = require('./lib/build-html')
 
@@ -13,17 +13,17 @@ var htmlPath = path.join(startPath, '/out.html')
 buildConstructor(startPath)
 
 // config for html file
-var nativeTags = countTag(startPath)
+// var nativeTags = countTag(startPath)
 var config = {
-	nativeDom: nativeTags,
+	// nativeDom: nativeTags,
 	initPath: path.join(startPath, '/all.js'),
 }
 fs.appendFileSync(constructorPath, 'exports.config = ' + JSON.stringify(config) + '\n')
 
-// get started
+// launch at front end
 fs.appendFileSync(constructorPath, 'require("' + path.join(__dirname, '/lib/init.js').replace(/\\/g, "\\\\") + '").init(exports)')
 
-// generate one html
+// generate one final html
 buildHTML(htmlPath, config)
 
 // bundle up using browserify.js
