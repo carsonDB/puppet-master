@@ -1,22 +1,15 @@
-exports.struct = [{"name":"div","children":[{"name":"ul","attr":{"id":"frame"},"children":[{"name":"li","attr":{"style":"color:#000000; border: 0px;"},"children":[]},{"name":"li","children":[]},{"name":"alert","children":[]}]}]}]
+exports.struct = [{"type":"tag","name":"div","children":[{"type":"tag","name":"flexibleBox","children":[{"type":"tag","name":"div","children":[{"type":"text","data":"box 1"}]},{"type":"tag","name":"div","children":[{"type":"text","data":"box 2"}]},{"type":"tag","name":"div","children":[{"type":"text","data":"box 3"}]}]}]}]
 exports.init = function(dom){
 (function(){
 
 // something needs to init
-	console.log('init...')
-}).call(dom.id("frame"));
-(function(){
-
-// go dying
-}).call(dom.id("line"));
-}
-exports.api = require("C:\\Users\\carson\\Documents\\GitHub\\puppet-master\\test")
-exports.definedTag = {
-"alert":require("alert\\constructor.js"),
-}
-exports.definedAddr = {
-"alert":"alert",
+	console.log('I have added three boxes into flexible-box')
+}).call(dom);
 }
 exports.require = require
-exports.config = {"nativeDom":{"div":true,"ul":true,"li":true},"initPath":"C:\\Users\\carson\\Documents\\GitHub\\puppet-master\\test\\all.js"}
-require("C:\\Users\\carson\\Documents\\GitHub\\puppet-master\\lib\\init.js").init(exports)
+exports.api = require("/home/carson/code/puppet-master/test")
+exports.definedTag = {
+"flexibleBox":require("flexible-box/constructor.js"),
+}
+exports.config = {"initPath":"/home/carson/code/puppet-master/test/all.js"}
+require("/home/carson/code/puppet-master/lib/init").init(exports)
