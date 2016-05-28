@@ -2,8 +2,9 @@ exports.struct = [{"type":"tag","name":"div","children":[{"type":"tag","name":"f
 exports.init = function(dom){
 (function(){
 
+"use strict";
 // something needs to init
-	console.log('I have added three boxes into flexible-box')
+	console.log('I have added three boxes into flexible-box');
 }).call(dom);
 }
 exports.require = require
